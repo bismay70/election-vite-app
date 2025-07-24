@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -18,12 +19,11 @@ export default function Header() {
 
         
           <nav className="hidden lg:flex items-center space-x-8">
-            <a href="#" className="text-gray-700 hover:text-black font-medium">Home</a>
+            <Link to="/" className="text-gray-700 hover:text-black font-medium">Home</Link>
+            <Link to="/admin" className="text-gray-700 hover:text-black font-medium">Admin Panel</Link>
+            <Link to="/voter" className="text-gray-700 hover:text-black font-medium">Voter Dashboard</Link>
+            <Link to="/voter_id" className="text-gray-700 hover:text-black font-medium">Voter ID</Link>
             <a href="#" className="text-gray-700 hover:text-black font-medium">About Us</a>
-            <a href="#" className="text-gray-700 hover:text-black font-medium">Mobile Voting</a>
-            <a href="#" className="text-gray-700 hover:text-black font-medium">Features</a>
-            <a href="#" className="text-gray-700 hover:text-black font-medium">Services</a>
-            <a href="#" className="text-gray-700 hover:text-black font-medium">Admin Panel</a>
             <a href="#" className="text-gray-700 hover:text-black font-medium">Contact Us</a>
           </nav>
 
